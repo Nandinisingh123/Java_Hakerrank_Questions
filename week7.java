@@ -1,3 +1,4 @@
+//week_7 day4 not given 
 import java.util.Scanner;
 
 public class TestEvaluation {
