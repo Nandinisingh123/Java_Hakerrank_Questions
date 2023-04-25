@@ -147,3 +147,144 @@ public class Solution {
             System.out.println("Invalid Input");
         }
 }}
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    
+    import java.io.*;
+import java.util.*;
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String word1 = sc.nextLine();
+        String word2 = sc.nextLine();
+
+        if (word1.length() < 3 || word2.length() < 3) {
+            System.out.println("ERROR");
+        } else {
+            if (word1.substring(0, 3).equals(new StringBuilder(word2.substring(word2.length()-3)).reverse().toString())) {
+                System.out.println("GREAT");
+            } else {
+                System.out.println("TRY NEXT TIME");
+            }
+        }
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    
+    import java.io.*;
+import java.util.*;
+
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String word1 = sc.nextLine();
+        String word2 = sc.nextLine();
+
+        if (word1.length() <= 2 || word2.length() <= 2) {
+            System.out.println("Invalid Input");
+        } else {
+            char[] chars1 = word1.toCharArray();
+            char[] chars2 = word2.toCharArray();
+            Arrays.sort(chars1);
+            Arrays.sort(chars2);
+            if (Arrays.equals(chars1, chars2)) {
+                System.out.println("ANAGRAM");
+            } else {
+                System.out.println("NOT ANAGRAM");
+            }
+        }
+    }
+}
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    import java.io.*;
+import java.util.*;
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String brackets = sc.nextLine();
+        String name = sc.nextLine();
+        System.out.println(brackets.substring(0,brackets.length()/2)+name+brackets.substring(brackets.length()/2));
+    }
+}
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    
+    import java.io.*;
+import java.util.*;
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String brackets = sc.nextLine();
+        String name = sc.nextLine();
+        System.out.println(brackets.substring(0,brackets.length()/2)+name+brackets.substring(brackets.length()/2));
+    }
+}
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    import java.io.*;
+import java.util.*;
+
+import java.util.Scanner;
+
+public class PTMGrade {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int numSubjects = sc.nextInt();
+        int totalMarks = 0;
+        for (int i = 1; i <= numSubjects; i++) {
+            int marks = sc.nextInt();
+            totalMarks += marks;
+        }
+        double percentage = (double) totalMarks / (numSubjects * 100) * 100;
+        String grade;
+        if (percentage > 90) {
+            grade = "A";
+        } else if (percentage >= 70 && percentage <= 89) {
+            grade = "A+";
+        } else if (percentage >= 60 && percentage <= 69) {
+            grade = "B";
+        } else if (percentage >= 50 && percentage <= 59) {
+            grade = "C";
+        } else {
+            grade = "D";
+        }
+        System.out.println(grade);
+    }
+}
+--------------------------------------------------------------------------------------------------------------------------------------------
+    import java.io.*;
+import java.util.*;
+
+public class Solution {
+    
+    boolean isBigger(int a, int b)
+    {
+        if(a>b)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+        
+    }
+
+    public static void main(String[] args) {
+       Scanner sc =new Scanner(System.in);
+       int n1=sc.nextInt();
+       int n2=sc.nextInt();
+       Solution res = new Solution();
+       System.out.println(res.isBigger(n1,n2));
+    }
+}
